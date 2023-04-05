@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+class mainin {
+public:
+	void run()
+	{
+		int x = 0;
+		scan();
+		divide();
+		x += check(a);
+		x += check(b);
+		x += check(c);
+		if (x == 3)
+			cout << "yes";
+		else
+			cout << "no";
+	}
+	void scan()
+	{
+		cin >> ch;
+	}
+	int check(char* che)
+	{
+		if (*che == '\0')
+			return 0;
+		for (; *che != '\0'; che++)
+		{
+			if (*che >= '0' && *che <= '9' || *che >= 'A' && *che <= 'Z' || *che >= 'a' && *che <= 'z' || *che == '_' || *che == '-')
+			{}
+			else
+				return 0;
+		}
+		return 1;
+	}
+	void divide()
+	{
+		int i = 0;
+		for (int j = 0; ch[i] != '@';i++,j++)
+		{
+			a[j] = ch[i];
+		}
+		i++;
+		for (int j = 0; ch[i] != '.'; i++, j++)
+		{
+			b[j] = ch[i];
+		}
+		i++;
+		for (int j = 0; ch[i] != '\0'; i++, j++)
+		{
+			c[j] = ch[i];
+		}
+	}
+private:
+	char ch[100];
+	char a[20] = { '\0' }, b[20] = {'\0'}, c[20] = { '\0' };
+};
+
+int main()
+{
+	mainin m;
+	m.run();
+}
