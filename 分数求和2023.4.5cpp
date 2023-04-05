@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a[10];
+	int b[10];
+	int n;
+	cin >> n;
+	int sum = 1;
+	int count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i] >> b[i];
+		sum = sum * b[i];
+	}
+	for (int j = 0; j < n; j++)
+	{
+		count = count + sum * a[j] / b[j];
+	}
+	for (int i = count; i > 1; i--)
+	{
+		if (count % i == 0 && sum % i == 0)
+		{
+			count = count / i;
+			sum = sum / i;
+		}
+	}
+	cout << count << sum << endl;
+}
