@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int k;
+	cin >> k;
+	for (int l = 0; l < k; l++)
+	{
+		int n;
+		cin >> n;
+		int m ;
+		cin >> m;
+		char a[10] = { 0 };
+		int i = 0;
+		do {
+			if (n % m < 10)
+			{
+				a[i] = n % m;
+			}
+			else if (n % m == 10)
+				a[i] = 'A';
+			else if(n%m==11)
+				a[i] = 'B';
+			else if (n % m == 12)
+				a[i] = 'C';
+			else if (n % m == 13)
+				a[i] = 'D';
+			else if (n % m == 14)
+				a[i] = 'E';
+			else 
+				a[i] = 'F';
+
+			n = n / m;
+			i++;
+		} while (n > 0);
+		for (int j = i - 1; j >= 0; j--)
+		{
+			cout << a[j];
+		}
+		cout << endl;
+	}
+}
