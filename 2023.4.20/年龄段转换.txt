@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a;
+	cin >> a;
+	if (a >= 1 && a <= 10)
+		cout << "Children" << endl;
+	else if (a >= 11 && a <= 20)
+		cout << "Teenagers" << endl;
+	else if (a >= 21 && a <= 40)
+		cout << "Youth" << endl;
+	else if (a >= 41 && a <= 50)
+		cout << "middle-aged" << endl;
+	else if (a >= 51 && a <= 80)
+		cout << "Elderly" << endl;
+	else if (a >= 81 && a <= 100)
+		cout << "Old man" << endl;
+}

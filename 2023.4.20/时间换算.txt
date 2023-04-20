@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int BJT, UTC;
+	cin >> BJT;
+	if (BJT >= 800)
+	{
+		UTC = BJT - 800;
+		cout << UTC << endl;
+	}
+	else {
+		UTC = BJT + 1600;
+		cout << UTC << endl;
+	}
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a;
+	cin >> a;
+	switch (a) {
+	case 1:cout << "Spring" << endl; break;
+	case 2:cout << "Summer" << endl; break;
+	case 3:cout << "Fall" << endl; break;
+	case 4:cout << "Winter" << endl; break;
+	}
+}
