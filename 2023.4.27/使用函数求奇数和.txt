@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int even(int n)
+{
+	if (n % 2 == 0)
+		return 1;
+	else 
+		return 0;
+}
+int main()
+{
+	int n=0;
+	int sum = 0;
+	do {
+		if(even(n)==0)
+		sum += n;
+		cin >> n;
+	} while (n > 0 );
+	cout << sum << endl;
+}

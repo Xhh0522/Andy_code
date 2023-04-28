@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int yue(int a, int b)
+{
+	int i=a;
+	for (i = a;i>0; i--)
+	{
+		if (a % i == 0 && b % i == 0)
+			break;
+	}
+	return i;
+		
+}
+int bei(int a, int b)
+{
+	int i = a;
+	for (i = a; ; i++)
+	{
+		if (i % a == 0 && i % b == 0)
+			break;
+	}
+	return i;
+}
+int main()
+{
+	int a , b ;
+	cin >> a >> b;
+	int c = yue(a, b);
+	cout << c<<endl;
+	int d = bei(a, b);
+	cout << d<<endl;
+}

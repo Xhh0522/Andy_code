@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a, b;
+	cin >> a;
+	scanf_s("/");
+	cin >> b;
+	cout << "0.";
+	int count = 0;
+	do {cout << 10 * a / b;
+		a = 10 * a % b;
+		
+		count++;
+		if (count == 200)
+			break;
+	} while (a != 0);
+	cout << endl;
+}
+	 

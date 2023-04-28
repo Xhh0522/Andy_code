@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	int a[100][100] = { 0 };
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	int max = 0;
+	int min = 100;
+	int l;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (a[i][j] > max)
+			{
+				max = a[i][j];
+			}
+			 l = j;
+		}
+		int k;
+			for (int i=0;i<n;i++)
+			{
+				min = 100;
+				if (a[i][l] < min)
+				{
+					min = a[i][l];
+					k = i;
+				}
+			}
+			if (max == min)
+			{
+				cout << i << " " << l << endl;
+				break;
+			}
+			else
+			{
+				cout << "NO" << endl;
+				break;
+			}
+	}
+}
+	 

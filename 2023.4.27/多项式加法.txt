@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a[10][2];
+	
+    
+	int b[100] = {0};
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> a[i][1]  >> a[i][2];
+		b[a[i][1]] += a[i][2];
+	}
+	for (int i = 99; i >= 0; i--)
+	{
+		if (i > 1&&b[i]!=0)
+			cout << b[i] << "x" << i << "+";
+		else if (i == 1 && b[i] != 0)
+			cout << b[i] << "x+";
+		else if (i == 0 && b[i] != 0)
+			cout << b[i] << endl;
+	}
+}
+	 
