@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <bitset>
+#include <stack>
+#include <sstream>
+#include <iomanip>
+#include <numeric>
+#include <algorithm>
+
+
+using namespace std;
+
+
+int main()
+{
+    string s;
+    int k;
+    cin >> s >> k;
+    string ans;
+    int cnt=0;
+    for (char c : s) {
+        if (c == '-') 
+        {
+            // 统计破折号的个数
+            cnt++;
+        }
+    }
+    // 处理第一组
+    int first_len = (s.size()-cnt) % k;
+    if (first_len == 0) { first_len = k; }
+    
+    int i = 0; int count1 = 0;
+    while (i < first_len) {
+        if (s[i] == '-') {
+            first_len++;
+        }
+        else {
+            ans += toupper(s[i]);
+            count1++;
+            if (count1 == first_len) {
+                ans += "-";
+                count1 = 0;
+            }
+        }
+        i++;
+    }
+
+    // 处理后面的分组
+    int count = 0;
+    while (i < s.size()) {
+        if (s[i] == '-') {
+            i++;
+        }
+        else {
+            ans += toupper(s[i]);
+            count++;
+            if (count == k) {
+                ans += "-";
+                count = 0;
+            }
+            i++;
+        }
+    }
+    if (ans.back() == '-')
+    {
+        ans.erase(ans.length() - 1);
+    } // 去掉最后一个破折号
+
+    cout << ans << endl;
+    return 0;
+}
