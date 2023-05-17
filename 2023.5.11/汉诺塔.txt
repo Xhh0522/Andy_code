@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <bitset>
+#include <stack>
+#include <sstream>
+#include <iomanip>
+#include <numeric>
+#include <algorithm>
+
+
+using namespace std;
+
+void Move(int num, char from, char to, int &count)
+{
+	 
+	cout << "Step" << ++count <<':'<<" Move"<<" Disk" << num << " from " << from <<" to " << to << endl;
+}
+
+
+void Hanoi(int n, char a, char b, char c,int &count)
+{
+	
+	if (n == 1)
+	{
+		Move(n, a, c,count);
+	}
+	else
+	{
+		
+		Hanoi(n - 1, a,c,b,count);
+		Move(n, a, c,count);
+		Hanoi(n - 1, b,a,c,count);
+	}
+}
+
+
+
+int main()
+{
+	int n;
+	cin >> n;
+	int count = 0;
+	Hanoi(n, 'A', 'B', 'C',count);
+
+	return 0;
+
+}

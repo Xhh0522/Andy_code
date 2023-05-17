@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <bitset>
+#include <stack>
+#include <sstream>
+#include <iomanip>
+#include <numeric>
+#include <algorithm>
+
+
+using namespace std;
+
+int Mypow(int basenum, int index)
+{
+	if (index <= 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return basenum * Mypow(basenum, index - 1);
+	}
+}
+
+
+
+
+int main()
+{
+	int n, i;
+	cin >> n >> i;
+	int mypow = Mypow(n, i);
+	cout << mypow;
+
+
+	return 0;
+
+}

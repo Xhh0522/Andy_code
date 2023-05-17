@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <bitset>
+#include <stack>
+#include <sstream>
+#include <iomanip>
+#include <numeric>
+#include <algorithm>
+
+
+using namespace std;
+
+
+int main()
+{
+	string binnum;
+	cin >> binnum;
+	reverse(binnum.begin(), binnum.end());
+	cout << binnum;
+
+
+	return 0;
+
+}
