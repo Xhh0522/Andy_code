@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <bitset>
+#include <stack>
+#include <sstream>
+#include <iomanip>
+#include <numeric>
+#include <algorithm>
+
+
+using namespace std;
+
+
+int main()
+{
+	string str1, str2;
+	int index;
+
+	getline(cin, str1);
+	getline(cin, str2);
+
+	
+	if ((int)str2.find(str1) < 0)
+	{
+		cout << (int)str2.find(str1);
+	}
+	else {
+		index = str2.find(str1);
+		
+		while (index != string::npos)
+		{
+			cout << index << " ";
+			index = str2.find(str1, index + 1);
+			
+		}
+	}
+	
+
+	return 0;
+}
